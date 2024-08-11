@@ -9,7 +9,7 @@ export default async function dbConnect() {
     console.log('Connected from previous');
     return global.mongoose.conn;
   } else {
-    const conString = process.env.MONGODB_URI;
+    const conString = process.env.NEXT_PUBLIC_MONGODB_URI;
     
     if (!global.mongoose.promise) {
       global.mongoose.promise = mongoose.connect(conString, {
